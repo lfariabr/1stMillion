@@ -1,0 +1,36 @@
+﻿date,investment_name,category,amount,currency,mid month check,complete month check,currency usd,currency eur,currency brl,currency aud,conv usd-brl,conv usd-aud,conv usd-eur,orig
+10/9/24,WISE,FR US dol,15000,AUD,,,,,,,,,,WISE
+10/9/24,ETB,Crypto,5141,BRL,,,,,,,,,,ETH
+10/9/24,BTC,Crypto,15844,BRL,,,,,,,,,,Bitcoin
+10/9/24,Investback,FR BRL,1762,BRL,,,,,,,,,,Investback
+10/9/24,CDB Semear,FR BRL,27885,BRL,,,,,,,,,,CDB Semear
+10/9/24,CDB Fibra,FR BRL,64064,BRL,,,,,,,,,,XP CDB Fibra
+10/9/24,BRCR,Funds BRL,315,BRL,,,,,,,,,,RICO BRCR11
+10/9/24,BCFF,Funds BRL,755,BRL,,,,,,,,,,RICO BCFF11
+10/9/24,SQIA3F,Ibov,69,BRL,,,,,,,,,,RICO SQIA3F
+10/9/24,ITA3,Ibov,416,BRL,,,,,,,,,,RICO ITA3
+10/9/24,FLYR3F,Ibov,2515,BRL,,,,,,,,,,RICO FLRY3F
+10/9/24,BPAC11,Ibov,5870,BRL,,,,,,,,,,RICO BPAC11
+10/9/24,Previdência,Pension,30025,BRL,,,,,,,,,,Previdência
+10/9/24,C6 savings,Savings BRL,240,BRL,,,,,,,,,,C6 Fixo
+10/9/24,Nu savings,Savings BRL,14800,BRL,,,,,,,,,,NuConta
+10/9/24,Euro savings,Savings EUR,555,EUR,,,,,,,,,,EURO C6
+10/9/24,Prefix 12m 1,FR US dol,510,USD,,,,,,,,,,td prefix 12m
+10/9/24,goldsman sachs,FR US dol,0,USD,,,,,,,,,,goldsman sachs
+10/9/24,Prefix 6m 1,FR US dol,1412,USD,,,,,,,,,,td prefix 06m
+10/9/24,Prefix daily,FR US dol,1761,USD,,,,,,,,,,td pós fix daily
+10/9/24,Goldman Sachs Fund,FR US dol,0,USD,,,,,,,,,,goldman sachs
+10/9/24,JPMorgan Fund,FR US dol,2055,USD,,,,,,,,,,jpmorgan
+10/9/24,Prefix 12m 2,FR US dol,2672,USD,,,,,,,,,,td prefix 12m
+10/9/24,Prefix 12m 3,FR US dol,0,USD,,,,,,,,,,td prefix 12m
+10/9/24,Prefix 6m 2,FR US dol,10010,USD,,,,,,,,,,td prefix 06m
+10/9/24,Fid Europ DGF,Fund US dol,2693,USD,,,,,,,,,,Fid Europ DGF
+10/9/24,Loomis Sayles US,Fund US dol,3880,USD,,,,,,,,,,Loomis Sayles US
+10/9/24,Fid Japan AF,Fund US dol,0,USD,,,,,,,,,,Fid Japan AF
+10/9/24,AMAZON,NASDQ US dol,6013,USD,,,,,,,,,,AMAZON
+10/9/24,TESLA,NASDQ US dol,2749,USD,,,,,,,,,,TESLA
+10/9/24,APPLE,NASDQ US dol,8881,USD,,,,,,,,,,APPLE
+,GOOGLE,NASDQ US dol,3339,USD,,,,,,,,,,
+,META,NASDQ US dol,3318,USD,,,,,,,,,,
+,MSFT,NASDQ US dol,3997,USD,,,,,,,,,,
+,PLTR,NASDQ US dol,2242,USD,,,,,,,,,,
