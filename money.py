@@ -1,29 +1,34 @@
 import streamlit as st
+from pathlib import Path
 
-# --- PAGE SETUP ---
-current = st.Page(
-    "views/current.py",
-    title="Current Status",
-    icon=":material/analytics:",
-)
+# Configuration
+VIEWS_DIR = Path("views")
 
-evolution = st.Page(
-    "views/evolution.py",
-    title="Evolution View",
-    icon=":material/trending_up:",
-)
-
-# --- NAVIGATION SETUP [WITH SECTIONS]---
-pg = st.navigation(
-    {
-        "Menu": [current,evolution],
+def main():
+    """Initialize and run the application"""
+    pages = {
+        "💰 Current Status": {
+            "path": VIEWS_DIR / "current.py",
+            "icon": "💰",
+        },
+        "📈 Evolution View": {
+            "path": VIEWS_DIR / "evolution.py",
+            "icon": "📈",
+        }
     }
-)
+    
+    # Create navigation
+    page_objects = []
+    for title, config in pages.items():
+        page = st.Page(
+            str(config["path"]),
+            title=title,
+            icon=config["icon"],
+        )
+        page_objects.append(page)
+    
+    navigation = st.navigation({"Menu": page_objects})
+    navigation.run()
 
-
-# --- SHARED ON ALL PAGES ---
-# st.logo("assets/codingisfun_logo.png")
-
-
-# --- RUN NAVIGATION ---
-pg.run()
+if __name__ == "__main__":
+    main()
