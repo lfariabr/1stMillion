@@ -1,5 +1,6 @@
 wheel==0.40.0
 setuptools==68.0.0
+tenacity==8.2.3
 streamlit==1.31.0
 pandas==2.0.3
 plotly==5.18.0
