@@ -10,7 +10,7 @@ st.set_page_config(page_title="Groceries",
                   page_icon="📈",
                   layout="wide")
 
-st.title("🛒 Groceries Account")
+st.title("🛒 Groceries")
 
 try:
     # Get credentials from secrets
@@ -70,12 +70,8 @@ try:
                 # Determine final amount based on operation
                 final_amount = amount if operation == "Add" else -amount
                 
-                # Find the next empty row
-                next_row = len(groceries_data) + 1
-                
-                # Update the spreadsheet with plain number
-                money_worksheet.update(f'A{next_row}', final_amount)
-                money_worksheet.update(f'B{next_row}', current_date)
+                # Update the spreadsheet with values in a range
+                money_worksheet.append_row([final_amount, current_date])
                 
                 st.success(f"{operation}ed amount: {final_amount}")
                 st.rerun()
