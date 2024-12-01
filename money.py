@@ -7,14 +7,18 @@ VIEWS_DIR = Path("views")
 def main():
     """Initialize and run the application"""
     pages = {
-        "💰 Current Status": {
+        "Groceries": {
+            "path": VIEWS_DIR / "groceries.py",
+            "icon": "🛒",
+        },
+        "Current Status": {
             "path": VIEWS_DIR / "current.py",
             "icon": "💰",
         },
-        "📈 Evolution View": {
+        "Evolution View": {
             "path": VIEWS_DIR / "evolution.py",
             "icon": "📈",
-        }
+        },
     }
     
     # Create navigation

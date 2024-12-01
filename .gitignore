@@ -1,6 +1,18 @@
+# Python
 venv/
 __pycache__/
 *.pyc
+
+# System files
 .DS_Store
-.env
 *.log
+
+# Credentials and sensitive data
+.env
+.streamlit/secrets.toml
+cred/
+*.json
+
+# IDE
+.vscode/
+.idea/

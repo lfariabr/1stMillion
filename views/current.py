@@ -2,8 +2,8 @@ import streamlit as st
 import plotly.express as px
 import pandas as pd
 import gspread
-from oauth2client.service_account import ServiceAccountCredentials
-from pathlib import Path
+import json
+from google.oauth2.service_account import Credentials
 
 st.set_page_config(page_title="Current Status",
                   page_icon="💰", 
@@ -12,21 +12,25 @@ st.set_page_config(page_title="Current Status",
 st.title("💰 Current Money Breakdown")
 
 try:
-    # Scope & Credentials Object
-    scope = ["https://spreadsheets.google.com/feeds", 
-             "https://www.googleapis.com/auth/spreadsheets"]
+    # Get credentials from secrets
+    credentials = json.loads(st.secrets["gsheets"]["credentials"])
+    spreadsheet_url = st.secrets["gsheets"]["spreadsheet_url"]
     
-    # Get credentials file path
-    creds_path = Path(__file__).parent.parent / "cred" / "stmillion-06bb3f0018ea.json"
-    if not creds_path.exists():
-        st.error("Credentials file not found!")
-        st.stop()
+    # Configure credentials
+    scope = [
+        "https://www.googleapis.com/auth/spreadsheets",
+        "https://www.googleapis.com/auth/drive"
+    ]
     
-    creds = ServiceAccountCredentials.from_json_keyfile_name(str(creds_path), scope)
-    client = gspread.authorize(creds)
-
-    # Open the spreadsheet by URL, get data and create dataframe
-    spreadsheet_url = "https://docs.google.com/spreadsheets/d/1tD6rHaHPCK_Va76QduwS-XKFIabMNrAYB_sGuH95PZM/edit?usp=sharing"
+    credentials = Credentials.from_service_account_info(
+        credentials,
+        scopes=scope
+    )
+    
+    # Create client
+    client = gspread.authorize(credentials)
+    
+    # Open spreadsheet
     money_sheet = client.open_by_url(spreadsheet_url)
     money_worksheet = money_sheet.worksheet("database")
     money_data = money_worksheet.get_all_values()
