@@ -1,3 +1,4 @@
+pip==24.3.1
 wheel==0.42.0
 setuptools==69.1.1
 streamlit==1.31.0
@@ -7,7 +8,6 @@ gspread==5.12.4
 google-auth==2.27.0
 google-auth-oauthlib==1.2.0
 google-auth-httplib2==0.2.0
-python-distutils-extra==2.39
 altair==5.4.1
 asgiref==3.8.1
 astor==0.8.1
